@@ -53,7 +53,8 @@ class SignUp extends React.Component {
                     <FormInput
                         label="Display Name"
                         name="displayName"
-                        type="text" value={displayName}
+                        type="text"
+                        value={displayName}
                         onChange={this.handleChange}
                         required ></FormInput>
                     <FormInput
