@@ -17,7 +17,5 @@ export const slelctShopItems = createSelector(
 export const selectCollection = collectionUrlParam =>
     createSelector(
         [slelctShopItems],
-        collections => collections.find(
-            collection => collection.id === COLLECTION_ID_MAP[collectionUrlParam] //ako prosledimo mens izbacice nam broj 5
-        )
+        collections => collections[collectionUrlParam] //ako prosledimo mens izbacice nam broj 5
     )
