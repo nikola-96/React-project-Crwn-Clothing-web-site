@@ -23,3 +23,12 @@ export const selectCollection = collectionUrlParam =>
         [slelctShopItems],
         collections => (collections ? collections[collectionUrlParam] : null) //ako prosledimo mens izbacice nam broj 5
     )
+
+export const selectIsCollectionFetching = createSelector(
+    [shopSelector],
+    shop => shop.isFetching
+)
+export const selectIsCollectionLoaded = createSelector(
+    [shopSelector],
+    shop => !!shop.collections
+)
