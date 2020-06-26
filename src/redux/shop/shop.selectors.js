@@ -16,10 +16,10 @@ export const slelctShopItems = createSelector(
 )
 export const selectCollectionForPreview = createSelector(
     [slelctShopItems],
-    collections => Object.keys(collections).map(key => collections[key])
+    collections => collections ? Object.keys(collections).map(key => collections[key]) : []
 )
 export const selectCollection = collectionUrlParam =>
     createSelector(
         [slelctShopItems],
-        collections => collections[collectionUrlParam] //ako prosledimo mens izbacice nam broj 5
+        collections => (collections ? collections[collectionUrlParam] : null) //ako prosledimo mens izbacice nam broj 5
     )
